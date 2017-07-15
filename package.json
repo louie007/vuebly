@@ -9,8 +9,23 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/louie007/vuebly.git"
+  },
+  "keywords": [
+    "weex",
+    "vue",
+    "ios",
+    "android",
+    "wechat"
+  ],
   "author": "Louie Bao",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/louie007/vuebly/issues"
+  },
+  "homepage": "https://github.com/louie007/vuebly#readme",
   "dependencies": {
     "caporal": "^0.7.0",
     "colors": "^1.1.2",

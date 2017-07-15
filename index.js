@@ -11,10 +11,6 @@ prog
   .option('-i, --ios', 'Add iOS platform support')
   .option('-a, --android', 'Add Android platform support')
   .option('-t, --templateUrl <URL>', 'Using a remote template')
-  .action(createLib)
-
-  .command('init', 'init a new Vuebly application')
-  .argument('<projectName>', 'The project name')
   .action(createLib);
 
 prog.parse(process.argv);
