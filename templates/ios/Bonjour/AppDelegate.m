@@ -2,11 +2,18 @@
 //  AppDelegate.m
 //  Bonjour
 //
-//  Created by Vuebly on 12/07/2017.
+//  Created by Vuebly on 15/07/2017.
 //  Copyright © 2017 Louie Bao. All rights reserved.
 //
 
+#import "AppDefine.h"
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "WXEventModule.h"
+#import "WXImgLoaderDefaultImpl.h"
+
+#import <WeexSDK/WeexSDK.h>
+#import <Foundation/Foundation.h>
 
 @interface AppDelegate ()
 
@@ -16,7 +23,31 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    //init SDK environment
+    [WXSDKEngine initSDKEnvironment];
+    
+    //set log
+    [WXLog setLogLevel:WXLogLevelLog];
+    
+    [WXSDKEngine registerModule:@"event" withClass:[WXEventModule class]];
+    [WXSDKEngine registerHandler:[WXEventModule new] withProtocol:@protocol(WXEventModuleProtocol)];
+    [WXSDKEngine registerHandler:[WXImgLoaderDefaultImpl new] withProtocol:@protocol(WXImgLoaderProtocol)];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    ViewController * viewController = [[ViewController alloc] init];
+    
+#if DEBUG
+    // viewController.url = [NSURL URLWithString:HOME_URL];
+    viewController.url = [NSURL URLWithString:BUNDLE_URL];
+#else
+    viewController.url = [NSURL URLWithString:BUNDLE_URL];
+#endif
+    
+    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

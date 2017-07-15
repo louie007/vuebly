@@ -7,50 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		87F1A40C1F15573B003A9FB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F1A40B1F15573B003A9FB0 /* main.m */; };
-		87F1A40F1F15573B003A9FB0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F1A40E1F15573B003A9FB0 /* AppDelegate.m */; };
-		87F1A4121F15573B003A9FB0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F1A4111F15573B003A9FB0 /* ViewController.m */; };
-		87F1A4151F15573B003A9FB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F1A4131F15573B003A9FB0 /* Main.storyboard */; };
-		87F1A4171F15573B003A9FB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87F1A4161F15573B003A9FB0 /* Assets.xcassets */; };
-		87F1A41A1F15573B003A9FB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F1A4181F15573B003A9FB0 /* LaunchScreen.storyboard */; };
-		87F1A4251F15573B003A9FB0 /* BonjourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F1A4241F15573B003A9FB0 /* BonjourTests.m */; };
+		87F4A5731F1A002600A1EC20 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F4A5721F1A002600A1EC20 /* main.m */; };
+		87F4A5761F1A002600A1EC20 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F4A5751F1A002600A1EC20 /* AppDelegate.m */; };
+		87F4A5791F1A002600A1EC20 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F4A5781F1A002600A1EC20 /* ViewController.m */; };
+		87F4A57C1F1A002600A1EC20 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F4A57A1F1A002600A1EC20 /* Main.storyboard */; };
+		87F4A57E1F1A002600A1EC20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87F4A57D1F1A002600A1EC20 /* Assets.xcassets */; };
+		87F4A5811F1A002600A1EC20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87F4A57F1F1A002600A1EC20 /* LaunchScreen.storyboard */; };
+		87F4A58C1F1A002700A1EC20 /* BonjourTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F4A58B1F1A002700A1EC20 /* BonjourTests.m */; };
+		87F4A5971F1A042300A1EC20 /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 87F4A5961F1A042300A1EC20 /* assets */; };
+		87F4A59E1F1A04C400A1EC20 /* WXEventModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F4A59B1F1A04C400A1EC20 /* WXEventModule.m */; };
+		87F4A59F1F1A04C400A1EC20 /* WXImgLoaderDefaultImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 87F4A59D1F1A04C400A1EC20 /* WXImgLoaderDefaultImpl.m */; };
+		B361B74AB24F0A439931170D /* libPods-Bonjour.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C3D03A7B9CFE618FD379C558 /* libPods-Bonjour.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		87F1A4211F15573B003A9FB0 /* PBXContainerItemProxy */ = {
+		87F4A5881F1A002700A1EC20 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 87F1A3FF1F15573B003A9FB0 /* Project object */;
+			containerPortal = 87F4A5661F1A002600A1EC20 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 87F1A4061F15573B003A9FB0;
+			remoteGlobalIDString = 87F4A56D1F1A002600A1EC20;
 			remoteInfo = Bonjour;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		87F1A4071F15573B003A9FB0 /* Bonjour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonjour.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		87F1A40B1F15573B003A9FB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		87F1A40D1F15573B003A9FB0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		87F1A40E1F15573B003A9FB0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		87F1A4101F15573B003A9FB0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		87F1A4111F15573B003A9FB0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		87F1A4141F15573B003A9FB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		87F1A4161F15573B003A9FB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		87F1A4191F15573B003A9FB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		87F1A41B1F15573B003A9FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		87F1A4201F15573B003A9FB0 /* BonjourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonjourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87F1A4241F15573B003A9FB0 /* BonjourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BonjourTests.m; sourceTree = "<group>"; };
-		87F1A4261F15573B003A9FB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87F4A56E1F1A002600A1EC20 /* Bonjour.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonjour.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87F4A5721F1A002600A1EC20 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		87F4A5741F1A002600A1EC20 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		87F4A5751F1A002600A1EC20 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		87F4A5771F1A002600A1EC20 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		87F4A5781F1A002600A1EC20 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		87F4A57B1F1A002600A1EC20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		87F4A57D1F1A002600A1EC20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87F4A5801F1A002600A1EC20 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87F4A5821F1A002600A1EC20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87F4A5871F1A002700A1EC20 /* BonjourTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BonjourTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87F4A58B1F1A002700A1EC20 /* BonjourTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BonjourTests.m; sourceTree = "<group>"; };
+		87F4A58D1F1A002700A1EC20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87F4A5961F1A042300A1EC20 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = assets; sourceTree = "<group>"; };
+		87F4A5991F1A04AF00A1EC20 /* AppDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDefine.h; sourceTree = "<group>"; };
+		87F4A59A1F1A04C400A1EC20 /* WXEventModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXEventModule.h; sourceTree = "<group>"; };
+		87F4A59B1F1A04C400A1EC20 /* WXEventModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXEventModule.m; sourceTree = "<group>"; };
+		87F4A59C1F1A04C400A1EC20 /* WXImgLoaderDefaultImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXImgLoaderDefaultImpl.h; sourceTree = "<group>"; };
+		87F4A59D1F1A04C400A1EC20 /* WXImgLoaderDefaultImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXImgLoaderDefaultImpl.m; sourceTree = "<group>"; };
+		8C66DF0045A6686E69600EE9 /* Pods-Bonjour.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonjour.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bonjour/Pods-Bonjour.release.xcconfig"; sourceTree = "<group>"; };
+		C3D03A7B9CFE618FD379C558 /* libPods-Bonjour.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bonjour.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CCC9E08B99861FE86036C69B /* Pods-Bonjour.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonjour.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bonjour/Pods-Bonjour.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		87F1A4041F15573B003A9FB0 /* Frameworks */ = {
+		87F4A56B1F1A002600A1EC20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B361B74AB24F0A439931170D /* libPods-Bonjour.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87F1A41D1F15573B003A9FB0 /* Frameworks */ = {
+		87F4A5841F1A002700A1EC20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -60,67 +74,103 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		87F1A3FE1F15573B003A9FB0 = {
+		2FAD06AC6F857FF35DFE1EF8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				87F1A4091F15573B003A9FB0 /* Bonjour */,
-				87F1A4231F15573B003A9FB0 /* BonjourTests */,
-				87F1A4081F15573B003A9FB0 /* Products */,
+				C3D03A7B9CFE618FD379C558 /* libPods-Bonjour.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		748CE7F7B394832DC6EE662E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CCC9E08B99861FE86036C69B /* Pods-Bonjour.debug.xcconfig */,
+				8C66DF0045A6686E69600EE9 /* Pods-Bonjour.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		87F4A5651F1A002600A1EC20 = {
+			isa = PBXGroup;
+			children = (
+				87F4A5701F1A002600A1EC20 /* Bonjour */,
+				87F4A58A1F1A002700A1EC20 /* BonjourTests */,
+				87F4A56F1F1A002600A1EC20 /* Products */,
+				87F4A5981F1A044700A1EC20 /* Resources */,
+				748CE7F7B394832DC6EE662E /* Pods */,
+				2FAD06AC6F857FF35DFE1EF8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		87F1A4081F15573B003A9FB0 /* Products */ = {
+		87F4A56F1F1A002600A1EC20 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				87F1A4071F15573B003A9FB0 /* Bonjour.app */,
-				87F1A4201F15573B003A9FB0 /* BonjourTests.xctest */,
+				87F4A56E1F1A002600A1EC20 /* Bonjour.app */,
+				87F4A5871F1A002700A1EC20 /* BonjourTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		87F1A4091F15573B003A9FB0 /* Bonjour */ = {
+		87F4A5701F1A002600A1EC20 /* Bonjour */ = {
 			isa = PBXGroup;
 			children = (
-				87F1A40D1F15573B003A9FB0 /* AppDelegate.h */,
-				87F1A40E1F15573B003A9FB0 /* AppDelegate.m */,
-				87F1A4101F15573B003A9FB0 /* ViewController.h */,
-				87F1A4111F15573B003A9FB0 /* ViewController.m */,
-				87F1A4131F15573B003A9FB0 /* Main.storyboard */,
-				87F1A4161F15573B003A9FB0 /* Assets.xcassets */,
-				87F1A4181F15573B003A9FB0 /* LaunchScreen.storyboard */,
-				87F1A41B1F15573B003A9FB0 /* Info.plist */,
-				87F1A40A1F15573B003A9FB0 /* Supporting Files */,
+				87F4A5991F1A04AF00A1EC20 /* AppDefine.h */,
+				87F4A5741F1A002600A1EC20 /* AppDelegate.h */,
+				87F4A5751F1A002600A1EC20 /* AppDelegate.m */,
+				87F4A5771F1A002600A1EC20 /* ViewController.h */,
+				87F4A5781F1A002600A1EC20 /* ViewController.m */,
+				87F4A59A1F1A04C400A1EC20 /* WXEventModule.h */,
+				87F4A59B1F1A04C400A1EC20 /* WXEventModule.m */,
+				87F4A59C1F1A04C400A1EC20 /* WXImgLoaderDefaultImpl.h */,
+				87F4A59D1F1A04C400A1EC20 /* WXImgLoaderDefaultImpl.m */,
+				87F4A57A1F1A002600A1EC20 /* Main.storyboard */,
+				87F4A57D1F1A002600A1EC20 /* Assets.xcassets */,
+				87F4A57F1F1A002600A1EC20 /* LaunchScreen.storyboard */,
+				87F4A5821F1A002600A1EC20 /* Info.plist */,
+				87F4A5711F1A002600A1EC20 /* Supporting Files */,
 			);
 			path = Bonjour;
 			sourceTree = "<group>";
 		};
-		87F1A40A1F15573B003A9FB0 /* Supporting Files */ = {
+		87F4A5711F1A002600A1EC20 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				87F1A40B1F15573B003A9FB0 /* main.m */,
+				87F4A5721F1A002600A1EC20 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		87F1A4231F15573B003A9FB0 /* BonjourTests */ = {
+		87F4A58A1F1A002700A1EC20 /* BonjourTests */ = {
 			isa = PBXGroup;
 			children = (
-				87F1A4241F15573B003A9FB0 /* BonjourTests.m */,
-				87F1A4261F15573B003A9FB0 /* Info.plist */,
+				87F4A58B1F1A002700A1EC20 /* BonjourTests.m */,
+				87F4A58D1F1A002700A1EC20 /* Info.plist */,
 			);
 			path = BonjourTests;
+			sourceTree = "<group>";
+		};
+		87F4A5981F1A044700A1EC20 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				87F4A5961F1A042300A1EC20 /* assets */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		87F1A4061F15573B003A9FB0 /* Bonjour */ = {
+		87F4A56D1F1A002600A1EC20 /* Bonjour */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87F1A4291F15573B003A9FB0 /* Build configuration list for PBXNativeTarget "Bonjour" */;
+			buildConfigurationList = 87F4A5901F1A002700A1EC20 /* Build configuration list for PBXNativeTarget "Bonjour" */;
 			buildPhases = (
-				87F1A4031F15573B003A9FB0 /* Sources */,
-				87F1A4041F15573B003A9FB0 /* Frameworks */,
-				87F1A4051F15573B003A9FB0 /* Resources */,
+				BD9F4B89EDFD070076EE3372 /* [CP] Check Pods Manifest.lock */,
+				87F4A56A1F1A002600A1EC20 /* Sources */,
+				87F4A56B1F1A002600A1EC20 /* Frameworks */,
+				87F4A56C1F1A002600A1EC20 /* Resources */,
+				308C779DA645E171E775848F /* [CP] Embed Pods Frameworks */,
+				181DFFEE1477A7E8F4E5511E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,48 +178,48 @@
 			);
 			name = Bonjour;
 			productName = Bonjour;
-			productReference = 87F1A4071F15573B003A9FB0 /* Bonjour.app */;
+			productReference = 87F4A56E1F1A002600A1EC20 /* Bonjour.app */;
 			productType = "com.apple.product-type.application";
 		};
-		87F1A41F1F15573B003A9FB0 /* BonjourTests */ = {
+		87F4A5861F1A002700A1EC20 /* BonjourTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 87F1A42C1F15573B003A9FB0 /* Build configuration list for PBXNativeTarget "BonjourTests" */;
+			buildConfigurationList = 87F4A5931F1A002700A1EC20 /* Build configuration list for PBXNativeTarget "BonjourTests" */;
 			buildPhases = (
-				87F1A41C1F15573B003A9FB0 /* Sources */,
-				87F1A41D1F15573B003A9FB0 /* Frameworks */,
-				87F1A41E1F15573B003A9FB0 /* Resources */,
+				87F4A5831F1A002700A1EC20 /* Sources */,
+				87F4A5841F1A002700A1EC20 /* Frameworks */,
+				87F4A5851F1A002700A1EC20 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				87F1A4221F15573B003A9FB0 /* PBXTargetDependency */,
+				87F4A5891F1A002700A1EC20 /* PBXTargetDependency */,
 			);
 			name = BonjourTests;
 			productName = BonjourTests;
-			productReference = 87F1A4201F15573B003A9FB0 /* BonjourTests.xctest */;
+			productReference = 87F4A5871F1A002700A1EC20 /* BonjourTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		87F1A3FF1F15573B003A9FB0 /* Project object */ = {
+		87F4A5661F1A002600A1EC20 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Louie Bao";
 				TargetAttributes = {
-					87F1A4061F15573B003A9FB0 = {
+					87F4A56D1F1A002600A1EC20 = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
 					};
-					87F1A41F1F15573B003A9FB0 = {
+					87F4A5861F1A002700A1EC20 = {
 						CreatedOnToolsVersion = 8.3.3;
 						ProvisioningStyle = Automatic;
-						TestTargetID = 87F1A4061F15573B003A9FB0;
+						TestTargetID = 87F4A56D1F1A002600A1EC20;
 					};
 				};
 			};
-			buildConfigurationList = 87F1A4021F15573B003A9FB0 /* Build configuration list for PBXProject "Bonjour" */;
+			buildConfigurationList = 87F4A5691F1A002600A1EC20 /* Build configuration list for PBXProject "Bonjour" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -177,29 +227,30 @@
 				en,
 				Base,
 			);
-			mainGroup = 87F1A3FE1F15573B003A9FB0;
-			productRefGroup = 87F1A4081F15573B003A9FB0 /* Products */;
+			mainGroup = 87F4A5651F1A002600A1EC20;
+			productRefGroup = 87F4A56F1F1A002600A1EC20 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				87F1A4061F15573B003A9FB0 /* Bonjour */,
-				87F1A41F1F15573B003A9FB0 /* BonjourTests */,
+				87F4A56D1F1A002600A1EC20 /* Bonjour */,
+				87F4A5861F1A002700A1EC20 /* BonjourTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		87F1A4051F15573B003A9FB0 /* Resources */ = {
+		87F4A56C1F1A002600A1EC20 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F1A41A1F15573B003A9FB0 /* LaunchScreen.storyboard in Resources */,
-				87F1A4171F15573B003A9FB0 /* Assets.xcassets in Resources */,
-				87F1A4151F15573B003A9FB0 /* Main.storyboard in Resources */,
+				87F4A5811F1A002600A1EC20 /* LaunchScreen.storyboard in Resources */,
+				87F4A5971F1A042300A1EC20 /* assets in Resources */,
+				87F4A57E1F1A002600A1EC20 /* Assets.xcassets in Resources */,
+				87F4A57C1F1A002600A1EC20 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87F1A41E1F15573B003A9FB0 /* Resources */ = {
+		87F4A5851F1A002700A1EC20 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -208,48 +259,98 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		181DFFEE1477A7E8F4E5511E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bonjour/Pods-Bonjour-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		308C779DA645E171E775848F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bonjour/Pods-Bonjour-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BD9F4B89EDFD070076EE3372 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		87F1A4031F15573B003A9FB0 /* Sources */ = {
+		87F4A56A1F1A002600A1EC20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F1A4121F15573B003A9FB0 /* ViewController.m in Sources */,
-				87F1A40F1F15573B003A9FB0 /* AppDelegate.m in Sources */,
-				87F1A40C1F15573B003A9FB0 /* main.m in Sources */,
+				87F4A5791F1A002600A1EC20 /* ViewController.m in Sources */,
+				87F4A59E1F1A04C400A1EC20 /* WXEventModule.m in Sources */,
+				87F4A59F1F1A04C400A1EC20 /* WXImgLoaderDefaultImpl.m in Sources */,
+				87F4A5761F1A002600A1EC20 /* AppDelegate.m in Sources */,
+				87F4A5731F1A002600A1EC20 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87F1A41C1F15573B003A9FB0 /* Sources */ = {
+		87F4A5831F1A002700A1EC20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87F1A4251F15573B003A9FB0 /* BonjourTests.m in Sources */,
+				87F4A58C1F1A002700A1EC20 /* BonjourTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		87F1A4221F15573B003A9FB0 /* PBXTargetDependency */ = {
+		87F4A5891F1A002700A1EC20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 87F1A4061F15573B003A9FB0 /* Bonjour */;
-			targetProxy = 87F1A4211F15573B003A9FB0 /* PBXContainerItemProxy */;
+			target = 87F4A56D1F1A002600A1EC20 /* Bonjour */;
+			targetProxy = 87F4A5881F1A002700A1EC20 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		87F1A4131F15573B003A9FB0 /* Main.storyboard */ = {
+		87F4A57A1F1A002600A1EC20 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				87F1A4141F15573B003A9FB0 /* Base */,
+				87F4A57B1F1A002600A1EC20 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		87F1A4181F15573B003A9FB0 /* LaunchScreen.storyboard */ = {
+		87F4A57F1F1A002600A1EC20 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				87F1A4191F15573B003A9FB0 /* Base */,
+				87F4A5801F1A002600A1EC20 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -257,7 +358,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		87F1A4271F15573B003A9FB0 /* Debug */ = {
+		87F4A58E1F1A002700A1EC20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -306,7 +407,7 @@
 			};
 			name = Debug;
 		};
-		87F1A4281F15573B003A9FB0 /* Release */ = {
+		87F4A58F1F1A002700A1EC20 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -349,8 +450,9 @@
 			};
 			name = Release;
 		};
-		87F1A42A1F15573B003A9FB0 /* Debug */ = {
+		87F4A5911F1A002700A1EC20 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCC9E08B99861FE86036C69B /* Pods-Bonjour.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Bonjour/Info.plist;
@@ -360,8 +462,9 @@
 			};
 			name = Debug;
 		};
-		87F1A42B1F15573B003A9FB0 /* Release */ = {
+		87F4A5921F1A002700A1EC20 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C66DF0045A6686E69600EE9 /* Pods-Bonjour.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Bonjour/Info.plist;
@@ -371,7 +474,7 @@
 			};
 			name = Release;
 		};
-		87F1A42D1F15573B003A9FB0 /* Debug */ = {
+		87F4A5941F1A002700A1EC20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -383,7 +486,7 @@
 			};
 			name = Debug;
 		};
-		87F1A42E1F15573B003A9FB0 /* Release */ = {
+		87F4A5951F1A002700A1EC20 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -398,32 +501,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		87F1A4021F15573B003A9FB0 /* Build configuration list for PBXProject "Bonjour" */ = {
+		87F4A5691F1A002600A1EC20 /* Build configuration list for PBXProject "Bonjour" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87F1A4271F15573B003A9FB0 /* Debug */,
-				87F1A4281F15573B003A9FB0 /* Release */,
+				87F4A58E1F1A002700A1EC20 /* Debug */,
+				87F4A58F1F1A002700A1EC20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		87F1A4291F15573B003A9FB0 /* Build configuration list for PBXNativeTarget "Bonjour" */ = {
+		87F4A5901F1A002700A1EC20 /* Build configuration list for PBXNativeTarget "Bonjour" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87F1A42A1F15573B003A9FB0 /* Debug */,
-				87F1A42B1F15573B003A9FB0 /* Release */,
+				87F4A5911F1A002700A1EC20 /* Debug */,
+				87F4A5921F1A002700A1EC20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		87F1A42C1F15573B003A9FB0 /* Build configuration list for PBXNativeTarget "BonjourTests" */ = {
+		87F4A5931F1A002700A1EC20 /* Build configuration list for PBXNativeTarget "BonjourTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				87F1A42D1F15573B003A9FB0 /* Debug */,
-				87F1A42E1F15573B003A9FB0 /* Release */,
+				87F4A5941F1A002700A1EC20 /* Debug */,
+				87F4A5951F1A002700A1EC20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 87F1A3FF1F15573B003A9FB0 /* Project object */;
+	rootObject = 87F4A5661F1A002600A1EC20 /* Project object */;
 }
