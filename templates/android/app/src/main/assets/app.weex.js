@@ -112,7 +112,7 @@
 	module.exports = {
 	  "wrapper": {
 	    "alignItems": "center",
-	    "marginTop": 120
+	    "paddingTop": 120
 	  },
 	  "title": {
 	    "fontSize": 52,
