@@ -41,13 +41,22 @@
     if ([url hasPrefix:@"//"]) {
         url = [@"http:" stringByAppendingString:url];
     }
-    return (id<WXImageOperationProtocol>)[[SDWebImageManager sharedManager] downloadImageWithURL:[NSURL URLWithString:url] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
-        
-    } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
-        if (completedBlock) {
-            completedBlock(image, error, finished);
-        }
-    }];
+    // Load local image
+    if ([url hasPrefix:@"file://"]) {
+        [url lastPathComponent];
+        NSString *newUrl = [NSString stringWithFormat:@"file://%@/assets/static/images/%@", [NSBundle mainBundle].bundlePath, [url lastPathComponent]];
+        UIImage *image = [UIImage imageNamed:[newUrl substringFromIndex:7]];
+        completedBlock(image, nil, YES);
+        return (id<WXImageOperationProtocol>) self;
+    } else {
+        // Load remote image
+        return (id<WXImageOperationProtocol>)[[SDWebImageManager sharedManager]downloadImageWithURL:[NSURL URLWithString:url] options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+        } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+            if (completedBlock) {
+                completedBlock(image, error, finished);
+            }
+        }];
+    }
 }
 
 @end

@@ -20,9 +20,9 @@
 #endif
 
 // For debugging
-#define HOME_URL [NSString stringWithFormat:@"http://%@:8080/dist/app.weex.js", DEMO_HOST]
+#define HOME_URL [NSString stringWithFormat:@"http://%@:8080/static/js/index.js", DEMO_HOST]
 
 // For packaging
-#define BUNDLE_URL [NSString stringWithFormat:@"file://%@/assets/app.weex.js",[NSBundle mainBundle].bundlePath]
+#define BUNDLE_URL [NSString stringWithFormat:@"file://%@/assets/static/js/index.js",[NSBundle mainBundle].bundlePath]
 
 #endif /* AppDefine_h */

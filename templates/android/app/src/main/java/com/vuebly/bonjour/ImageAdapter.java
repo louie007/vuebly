@@ -34,6 +34,11 @@ public class ImageAdapter implements IWXImgLoaderAdapter {
                 if (url.startsWith("//")) {
                     temp = "https:" + url;
                 }
+                if (temp.startsWith("/images/")) {
+                    temp = temp.replace("../", "");
+                    temp = temp.replace("./", "");
+                    temp = temp.replace("/images/", "file:///android_asset/static/images/");
+                }
                 if (view.getLayoutParams().width <= 0 || view.getLayoutParams().height <= 0) {
                     return;
                 }

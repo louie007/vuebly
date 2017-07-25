@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity implements IWXRenderListener
         mWXSDKInstance = new WXSDKInstance(this);
         mWXSDKInstance.registerRenderListener(this);
 
-        mWXSDKInstance.render(WXFileUtils.loadAsset("app.weex.js", this));
+        mWXSDKInstance.render(WXFileUtils.loadAsset("static/js/index.js", this));
     }
 
     @Override
