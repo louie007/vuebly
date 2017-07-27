@@ -24,9 +24,9 @@ exports.buildEntry = function () {
   fs.readdirSync(srcPath).forEach(file => {
     var fullpath = path.resolve(srcPath, file)
     var extname = path.extname(fullpath)
-    var name = path.basename(file, extname).toLowerCase()
+    var name = path.basename(file, extname)
     if (fs.statSync(fullpath).isFile() && extname === '.vue') {
-      fs.outputFileSync(path.resolve(entryPath, name + '.js'), exports.getEntryFileContent('../views/' + name))
+      fs.outputFileSync(path.resolve(entryPath, name.toLowerCase() + '.js'), exports.getEntryFileContent('../views/' + name))
     }
   })
   var entry = {}

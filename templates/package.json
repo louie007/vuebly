@@ -18,7 +18,7 @@
     "copy:android": "rm -rf android/app/src/main/assets && cp -rf dist/weex android/app/src/main/assets",
     "copy": "npm run copy:ios && npm run copy:android",
     "debug": "weex-devtool",
-    "dev": "node build/webpack.dev.conf.js",
+    "dev": "rm -rf src/entry && node build/webpack.dev.conf.js",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
@@ -26,9 +26,7 @@
     "vue-router": "^2.6.0",
     "vuex": "^2.3.1",
     "vuex-router-sync": "^4.2.0",
-    "weex-loader": "^0.4.5",
-    "weex-styler": "git+https://github.com/louie007/weex-styler.git",
-    "weex-vue-loader": "^0.4.0",
+    "weex-loader": "git+https://github.com/louie007/weex-loader.git",
     "weex-vue-render": "^0.11.57"
   },
   "devDependencies": {
@@ -75,6 +73,6 @@
     "webpack-dev-server": "^2.5.1",
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0",
-    "weex-devtool": "^0.2.80"
+    "weex-devtool": "git+https://github.com/louie007/weex-devtool.git"
   }
 }

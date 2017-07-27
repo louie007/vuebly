@@ -70,7 +70,7 @@ module.exports = function getBaseConfig (_loader) {
         }
       ].concat(_loader === 'vue'
         ? [{
-            test: /\.vue$/,
+            test: /\.vue(\?[^?]+)?$/,
             loader: 'vue-loader', // web => 'vue-loader'
             include: [utils.resolve('src'), utils.resolve('test')],
             options: {
@@ -91,7 +91,7 @@ module.exports = function getBaseConfig (_loader) {
             }
           }]
         : [{
-            test: /\.vue$/,
+            test: /\.vue(\?[^?]+)?$/,
             loader: 'weex-loader', // native => 'weex-loader'
             include: [utils.resolve('src'), utils.resolve('test')]
           }]
@@ -107,7 +107,9 @@ module.exports = function getBaseConfig (_loader) {
         }
       }),
       new webpack.BannerPlugin({
-        banner: '// { "framework": "Vue" }\n',
+        banner: `// { "framework": "Vue" }\n
+${ _loader === 'weex' ? 'var CSS_UNIT = new Object();\nCSS_UNIT.REM = weex.config.env.deviceWidth / 10;\n' : '' }
+`,
         raw: true
       })
     ]

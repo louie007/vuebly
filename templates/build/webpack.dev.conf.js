@@ -46,7 +46,7 @@ const weexModeConfig = merge(baseWebpackConfig('weex'), {
   output: {
     path: config.build.distWeexStatic,
     filename: 'js/[name].js'
-  },
+  }
 })
 
 console.log('> Starting dev server...')
