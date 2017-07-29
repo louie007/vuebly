@@ -1,8 +1,11 @@
-var path = require('path')
-var webpack = require('webpack')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-var utils = require('./utils')
-var config = require('./config')
+/**
+ * Basic Webpack config
+ * Param: 'vue' and 'weex'
+ */
+
+const webpack = require('webpack')
+const utils = require('./utils')
+const config = require('./config')
 
 module.exports = function getBaseConfig (_loader) {
   return {
@@ -70,31 +73,25 @@ module.exports = function getBaseConfig (_loader) {
         }
       ].concat(_loader === 'vue'
         ? [{
-            test: /\.vue(\?[^?]+)?$/,
-            loader: 'vue-loader', // web => 'vue-loader'
-            include: [utils.resolve('src'), utils.resolve('test')],
-            options: {
-              loaders: utils.cssLoaders({
-                sourceMap: process.env.NODE_ENV === 'production'
-                  ? config.build.sourceMap
-                  : config.dev.sourceMap,
-                extract: true
-              }),
-              compilerModules: [
-                {
-                  postTransformNode: el => {
-                    el.staticStyle = `$processStyle(${el.staticStyle})`
-                    el.styleBinding = `$processStyle(${el.styleBinding})`
-                  }
+          test: /\.vue(\?[^?]+)?$/,
+          loader: 'vue-loader', // web => 'vue-loader'
+          include: [utils.resolve('src'), utils.resolve('test')],
+          options: {
+            compilerModules: [
+              {
+                postTransformNode: el => {
+                  el.staticStyle = `$processStyle(${el.staticStyle})`
+                  el.styleBinding = `$processStyle(${el.styleBinding})`
                 }
-              ]
-            }
-          }]
+              }
+            ]
+          }
+        }]
         : [{
-            test: /\.vue(\?[^?]+)?$/,
-            loader: 'weex-loader', // native => 'weex-loader'
-            include: [utils.resolve('src'), utils.resolve('test')]
-          }]
+          test: /\.vue(\?[^?]+)?$/,
+          loader: 'weex-loader', // native => 'weex-loader'
+          include: [utils.resolve('src'), utils.resolve('test')]
+        }]
       )
     },
     plugins: [
@@ -107,9 +104,7 @@ module.exports = function getBaseConfig (_loader) {
         }
       }),
       new webpack.BannerPlugin({
-        banner: `// { "framework": "Vue" }\n
-${ _loader === 'weex' ? 'var CSS_UNIT = new Object();\nCSS_UNIT.REM = weex.config.env.deviceWidth / 10;\n' : '' }
-`,
+        banner: '// { "framework": "Vue" }\n',
         raw: true
       })
     ]

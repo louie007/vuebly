@@ -1,9 +1,13 @@
-// Set environment
+/**
+ * Set Webpack config for HTML5 Web mode and Native Weex mode,
+ * - build src to dist/web directory,
+ * - build src to dist/weex directory
+ */
+
 process.env.NODE_ENV = 'production'
 
 var ora = require('ora')
 var chalk = require('chalk')
-var path = require('path')
 var webpack = require('webpack')
 var merge = require('webpack-merge')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
@@ -14,12 +18,14 @@ var utils = require('./utils')
 var config = require('./config')
 var baseWebpackConfig = require('./webpack.base.conf')
 
-var spinner = ora('building for production...')
-spinner.start()
+/**
+ * Webpack config for HTML5 Web mode: 'webModeConfig'
+ * Single entry file for web mode: 'config.dev.webEntry'
+ */
 
 var webModeConfig = merge(baseWebpackConfig('vue'), {
   entry: {
-    app: [config.build.entryWeb]
+    app: [config.build.webEntry]
   },
   output: {
     path: config.build.distWebStatic,
@@ -78,6 +84,11 @@ var webModeConfig = merge(baseWebpackConfig('vue'), {
   ]// End
 })
 
+/**
+ * Webpack config for native weex mode: 'weexModeConfig'
+ * Multiple entry files for weex mode, built from src/views
+ */
+
 var weexModeConfig = merge(baseWebpackConfig('weex'), {
   entry: utils.buildEntry(),
   output: {
@@ -94,6 +105,13 @@ var weexModeConfig = merge(baseWebpackConfig('weex'), {
     ])
   ] // End
 })
+
+/**
+ * Build now
+ */
+
+var spinner = ora('Building for production...')
+spinner.start()
 
 webpack([webModeConfig, weexModeConfig], function (err, stats) {
   spinner.stop()

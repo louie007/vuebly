@@ -27,12 +27,12 @@ export default {
 }
 </script>
 
-<style>
+<style lang="sass" scoped>
 
 .vuebly-env-info {
-  margin-bottom: 0.5rem;
+  margin-bottom: 30px;
   text-align: center;
-  font-size: 0.4rem;
+  font-size: 30px;
   color: #e91e63;
 }
 

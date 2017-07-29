@@ -6,10 +6,10 @@ exports.resolve = function (dir) {
   return path.join(__dirname, '..', dir)
 }
 
-var srcPath = exports.resolve('src/views')
-var entryPath = exports.resolve('src/entry')
+// var srcPath = exports.resolve('src/views')
+// var entryPath = exports.resolve('entry')
 
-exports.getEntryFileContent  = function (_path) {
+exports.getEntryFileContent = function (_path) {
   return `// Weex Entry
 import App from '${_path}.vue'
 /* eslint-disable no-new */
@@ -17,26 +17,26 @@ new Vue({
   el: '#root',
   render: h => h(App)
 })
-`}
+`
+}
 
 exports.buildEntry = function () {
   // Write entry files
-  fs.readdirSync(srcPath).forEach(file => {
-    var fullpath = path.resolve(srcPath, file)
+  fs.readdirSync(config.dev.weexViewsSrc).forEach(file => {
+    var fullpath = path.resolve(config.dev.weexViewsSrc, file)
     var extname = path.extname(fullpath)
     var name = path.basename(file, extname)
     if (fs.statSync(fullpath).isFile() && extname === '.vue') {
-      fs.outputFileSync(path.resolve(entryPath, name.toLowerCase() + '.js'), exports.getEntryFileContent('../views/' + name))
+      fs.outputFileSync(path.resolve(config.dev.weexViewsEntries, name.toLowerCase() + '.js'), exports.getEntryFileContent('../views/' + name))
     }
   })
   var entry = {}
   // Create entry files array
-  fs.readdirSync(entryPath).forEach(file => {
-    const name = path.basename(file, path.extname(path.resolve(entryPath, file))).toLowerCase()
-    entry[name] = path.resolve(entryPath, name + '.js')
+  fs.readdirSync(config.dev.weexViewsEntries).forEach(file => {
+    const name = path.basename(file, path.extname(path.resolve(config.dev.weexViewsEntries, file))).toLowerCase()
+    entry[name] = [path.resolve(config.dev.weexViewsEntries, name + '.js')]
   })
   return entry
-
 }
 
 exports.cssLoaders = function (options) {

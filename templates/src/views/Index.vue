@@ -26,14 +26,14 @@ export default {
 }
 </script>
 
-<style>
+<style lang="sass" scoped>
   @import '../assets/css/base.scss';
 
   .vuebly-logo-image {
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    height: 3rem;
-    width: 3rem;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    height: 260px;
+    width: 260px;
   }
   .vuebly-hello-text {
     color: red;

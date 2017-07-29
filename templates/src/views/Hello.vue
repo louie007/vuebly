@@ -50,20 +50,20 @@ export default {
 }
 </script>
 
-<style>
+<style lang="sass" scoped>
   @import '../assets/css/base.scss';
   
   .vuebly-hello-text {
-    margin-top: 3rem;
+    margin-top: 150px;
     text-align: center;
-    font-size: 0.5rem;
-    height: 2rem;
+    font-size: 30px;
+    height: 100px;
     color: #575757;
   }
   .vuebly-countdown-text {
-    margin-bottom: 0.5rem;
+    margin-bottom: 30px;
     text-align: center;
-    font-size: 0.4rem;
+    font-size: 30px;
     color: #e91e63;
   }
 
