@@ -3,9 +3,9 @@
     <text class="vuebly-hello-text">{{ hello }}</text>
     <text class="vuebly-countdown-text">Countdown: {{ countdown }} </text>
     <env title="deviceWidth"></env>
-    <button @click="click" class="vuebly-button">
+    <a @click="click" class="vuebly-button">
       <text class="vuebly-button-text">Go back</text>
-    </button>
+    </a>
   </div>
 </template>
 
@@ -50,23 +50,21 @@ export default {
 }
 </script>
 
-<style lang="sass" scope>
-  @import '../assets/css/base';
-</style>
-<style lang="sass" scope>
-
-.vuebly-hello-text {
-  margin-top: 3rem;
-  text-align: center;
-  font-size: 0.5rem;
-  height: 2rem;
-  color: #575757;
-}
-.vuebly-countdown-text {
-  margin-bottom: 0.5rem;
-  text-align: center;
-  font-size: 0.4rem;
-  color: #e91e63;
-}
+<style>
+  @import '../assets/css/base.scss';
+  
+  .vuebly-hello-text {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.5rem;
+    height: 2rem;
+    color: #575757;
+  }
+  .vuebly-countdown-text {
+    margin-bottom: 0.5rem;
+    text-align: center;
+    font-size: 0.4rem;
+    color: #e91e63;
+  }
 
 </style>

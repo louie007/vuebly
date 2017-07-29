@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <image class="vuebly-logo-image" style="width:200px; height:200px;" src="/static/images/vuebly.png" />
-    <button @click="click" class="vuebly-button">
+    <image class="vuebly-logo-image" src="/static/images/vuebly.png" />
+    <a @click="click" class="vuebly-button">
       <text class="vuebly-button-text">Say Hello</text>
-    </button>
+    </a>
   </div>
 </template>
 
@@ -26,16 +26,16 @@ export default {
 }
 </script>
 
-<style lang="sass" scope>
-  @import '../assets/css/base';
-</style>
-<style lang="sass" scope>
+<style>
+  @import '../assets/css/base.scss';
 
-figure.vuebly-logo-image {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  height: 3rem;
-  width: 3rem;
-}
-
+  .vuebly-logo-image {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    height: 3rem;
+    width: 3rem;
+  }
+  .vuebly-hello-text {
+    color: red;
+  }
 </style>

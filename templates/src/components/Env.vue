@@ -27,7 +27,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scope>
+<style>
 
 .vuebly-env-info {
   margin-bottom: 0.5rem;

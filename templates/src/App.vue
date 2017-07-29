@@ -1,7 +1,9 @@
 <template>
-  <transition name="fade" mode="out-in">
-    <router-view></router-view>
-  </transition>
+  <div class="weex-root">
+    <transition name="fade" mode="out-in">
+      <router-view></router-view>
+    </transition>
+  </div>
 </template>
 
 <script>
