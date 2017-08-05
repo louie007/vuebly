@@ -1,10 +1,10 @@
 {
   "name": "vuebly",
-  "version": "1.1.3",
+  "version": "1.1.4",
   "description": "A Weex UI framework for WeChat, Native iOS and Android App",
-  "main": "index.js",
+  "main": "lib/index.js",
   "bin": {
-    "vuebly": "index.js"
+    "vuebly": "cli/index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

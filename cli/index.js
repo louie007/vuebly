@@ -4,7 +4,7 @@ const prog = require('caporal');
 const createLib = require('./lib/create');
 
 prog
-  .version('1.1.1')
+  .version('1.1.4')
   .command('new', 'Create a new Vuebly application')
   .alias('create')
   .argument('<projectName>', 'The project name')

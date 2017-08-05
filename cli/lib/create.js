@@ -7,7 +7,7 @@ const colors = require("colors/safe");
 // *templateUrl: remote template url
 module.exports = (args, options, logger) => {
   const projectName = args.projectName
-  const templatePath = `${__dirname}/../templates`;
+  const templatePath = `${__dirname}/../../templates`;
   const localPath = `${process.cwd()}/${projectName}`;
 
   if (fs.existsSync(localPath)) {
