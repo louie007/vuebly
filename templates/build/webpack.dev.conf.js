@@ -110,7 +110,8 @@ configArray.forEach(function (config) {
 app.use(require('connect-history-api-fallback')())
 
 // Serve pure static assets
-app.use(config.dev.assetsPublicStaticPath, express.static('./static'))
+const staticPath = utils.joinPath(config.dev.assetsPublicPath, config.dev.assetsPublicStaticPath)
+app.use(staticPath, express.static('./static'))
 
 let _resolve
 const readyPromise = new Promise(resolve => {

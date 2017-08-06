@@ -6,6 +6,10 @@ exports.resolve = function (dir) {
   return path.join(__dirname, '..', dir)
 }
 
+exports.joinPath = function (path1, path2) {
+  return path.posix.join(path1, path2)
+}
+
 // var srcPath = exports.resolve('src/views')
 // var entryPath = exports.resolve('entry')
 

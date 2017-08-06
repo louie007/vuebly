@@ -13,7 +13,7 @@
     "ios"
   ],
   "scripts": {
-    "build": "rm -rf dist && rm -rf src/entry && node build/webpack.build.conf.js",
+    "build": "rm -rf dist && rm -rf src/entries && node build/webpack.build.conf.js",
     "copy:ios": "rm -rf ios/assets && cp -rf dist/weex ios/assets",
     "copy:android": "rm -rf android/app/src/main/assets && cp -rf dist/weex android/app/src/main/assets",
     "copy": "npm run copy:ios && npm run copy:android",

@@ -28,9 +28,9 @@ var webModeConfig = merge(baseWebpackConfig('vue'), {
     app: [config.build.webEntry]
   },
   output: {
-    path: config.build.distWebStatic,
-    filename: 'js/[name].[chunkhash].js',
-    chunkFilename: 'js/[id].[chunkhash].js'
+    path: config.build.distWeb,
+    filename: utils.joinPath(config.build.assetsPublicStaticPath, 'js/[name].[chunkhash].js'),
+    chunkFilename: utils.joinPath(config.build.assetsPublicStaticPath, 'js/[id].[chunkhash].js')
   },
   devtool: config.build.sourceMap ? '#source-map' : false,
   externals: {},
