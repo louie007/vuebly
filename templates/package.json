@@ -68,7 +68,6 @@
     "webpack-dev-server": "^2.5.1",
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0",
-    "weex-builder": "^0.2.6",
     "weex-loader": "^0.4.5",
     "weex-vue-render": "^0.11.57"
   }
