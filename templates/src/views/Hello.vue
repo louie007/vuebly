@@ -50,7 +50,7 @@ export default {
 }
 </script>
 
-<style lang="sass" scoped>
+<style lang="scss" scoped>
   @import '../assets/css/base.scss';
   
   .vuebly-hello-text {

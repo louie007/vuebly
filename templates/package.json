@@ -62,13 +62,13 @@
     "sass-loader": "^6.0.6",
     "serve": "^6.0.2",
     "url-loader": "^0.5.8",
-    "vue-loader": "^10.3.0",
+    "vue-loader": "^12.2.2",
     "webpack": "^2.6.1",
     "webpack-dev-middleware": "^1.10.0",
     "webpack-dev-server": "^2.5.1",
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0",
     "weex-loader": "^0.4.5",
-    "weex-vue-render": "^0.11.57"
+    "weex-vue-render": "^0.12.3"
   }
 }

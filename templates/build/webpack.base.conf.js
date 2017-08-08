@@ -77,6 +77,9 @@ module.exports = function getBaseConfig (_loader) {
           loader: 'vue-loader', // web => 'vue-loader'
           include: [utils.resolve('src'), utils.resolve('test')],
           options: {
+            loaders: {
+              'scss': 'vue-style-loader!css-loader!sass-loader'
+            },
             compilerModules: [
               {
                 postTransformNode: el => {
@@ -90,7 +93,12 @@ module.exports = function getBaseConfig (_loader) {
         : [{
           test: /\.vue(\?[^?]+)?$/,
           loader: 'weex-loader', // native => 'weex-loader'
-          include: [utils.resolve('src'), utils.resolve('test')]
+          include: [utils.resolve('src'), utils.resolve('test')],
+          options: {
+            loaders: {
+              'scss': ['weex-vue-loader/lib/style-loader', 'sass-loader']
+            }
+          }
         }]
       )
     },

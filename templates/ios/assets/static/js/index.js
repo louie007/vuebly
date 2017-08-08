@@ -1,4 +1,6 @@
 // { "framework": "Vue" }
+var CSS_UNIT = new Object();
+CSS_UNIT.REM = 75;
 
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -238,10 +240,8 @@ module.exports = {
     "color": "#FFFFFF"
   },
   "vuebly-logo-image": {
-    "marginTop": 100,
-    "marginBottom": 60,
-    "height": 260,
-    "width": 260
+    "height": 3.5 * CSS_UNIT.REM,
+    "width": 3.5 * CSS_UNIT.REM
   },
   "vuebly-hello-text": {
     "color": "#FF0000"
