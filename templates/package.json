@@ -69,6 +69,6 @@
     "webpack-hot-middleware": "^2.18.0",
     "webpack-merge": "^4.1.0",
     "weex-loader": "^0.4.5",
-    "weex-vue-render": "^0.12.3"
+    "weex-vue-render": "git+https://github.com/louie007/weex-vue-render-fixed.git"
   }
 }
