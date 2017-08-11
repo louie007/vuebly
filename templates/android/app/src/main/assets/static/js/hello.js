@@ -1,4 +1,6 @@
 // { "framework": "Vue" }
+var CSS_UNIT = new Object();
+CSS_UNIT.REM = 75;
 
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -65,7 +67,7 @@
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 15);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -113,27 +115,6 @@ exports.default = {
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-var _Hello = __webpack_require__(4);
-
-var _Hello2 = _interopRequireDefault(_Hello);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-new Vue({
-  el: '#root',
-  render: function render(h) {
-    return h(_Hello2.default);
-  }
-});
-
-/***/ }),
-/* 2 */,
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
@@ -142,7 +123,7 @@ __vue_styles__.push(__webpack_require__(10)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(6)
+__vue_exports__ = __webpack_require__(7)
 
 /* template */
 var __vue_template__ = __webpack_require__(13)
@@ -159,7 +140,7 @@ if (typeof __vue_options__ === "function") {
 
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-58ffeb40"
+__vue_options__._scopeId = "data-v-b9492d4a"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -174,7 +155,29 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 4 */
+/* 2 */,
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Hello = __webpack_require__(1);
+
+var _Hello2 = _interopRequireDefault(_Hello);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+new Vue({
+  el: '#root',
+  render: function render(h) {
+    return h(_Hello2.default);
+  }
+});
+
+/***/ }),
+/* 4 */,
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __vue_exports__, __vue_options__
@@ -185,7 +188,7 @@ __vue_styles__.push(__webpack_require__(11)
 )
 
 /* script */
-__vue_exports__ = __webpack_require__(7)
+__vue_exports__ = __webpack_require__(6)
 
 /* template */
 var __vue_template__ = __webpack_require__(14)
@@ -202,7 +205,7 @@ if (typeof __vue_options__ === "function") {
 
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-677908f5"
+__vue_options__._scopeId = "data-v-bf9fef8c"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -217,7 +220,6 @@ module.exports = __vue_exports__
 
 
 /***/ }),
-/* 5 */,
 /* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -259,7 +261,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _Env = __webpack_require__(3);
+var _Env = __webpack_require__(5);
 
 var _Env2 = _interopRequireDefault(_Env);
 
@@ -319,28 +321,15 @@ exports.default = {
 /***/ (function(module, exports) {
 
 module.exports = {
-  "vuebly-env-info": {
-    "marginBottom": 30,
-    "textAlign": "center",
-    "fontSize": 30,
-    "color": "#e91e63"
-  }
-}
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports) {
-
-module.exports = {
   "container": {
     "flexDirection": "column",
     "alignItems": "center",
     "justifyContent": "flex-start"
   },
   "vuebly-button": {
-    "width": 480,
-    "height": 80,
-    "borderRadius": 40,
+    "width": 8 * CSS_UNIT.REM,
+    "height": 1.2 * CSS_UNIT.REM,
+    "borderRadius": 0.6 * CSS_UNIT.REM,
     "backgroundColor": "#e91e63",
     "justifyContent": "center",
     "alignItems": "center",
@@ -351,13 +340,26 @@ module.exports = {
     "color": "#FFFFFF"
   },
   "vuebly-hello-text": {
-    "marginTop": 150,
+    "marginTop": 2 * CSS_UNIT.REM,
     "textAlign": "center",
-    "fontSize": 30,
-    "height": 100,
+    "fontSize": 0.5 * CSS_UNIT.REM,
+    "height": 1 * CSS_UNIT.REM,
     "color": "#575757"
   },
   "vuebly-countdown-text": {
+    "marginBottom": 0.2 * CSS_UNIT.REM,
+    "textAlign": "center",
+    "fontSize": 0.5 * CSS_UNIT.REM,
+    "color": "#e91e63"
+  }
+}
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+module.exports = {
+  "vuebly-env-info": {
     "marginBottom": 30,
     "textAlign": "center",
     "fontSize": 30,
@@ -368,16 +370,6 @@ module.exports = {
 /***/ }),
 /* 12 */,
 /* 13 */
-/***/ (function(module, exports) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('text', {
-    staticClass: ["vuebly-env-info"]
-  }, [_vm._v(_vm._s(_vm.info))])
-},staticRenderFns: []}
-
-/***/ }),
-/* 14 */
 /***/ (function(module, exports) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -402,11 +394,14 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 },staticRenderFns: []}
 
 /***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 14 */
+/***/ (function(module, exports) {
 
-module.exports = __webpack_require__(1);
-
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('text', {
+    staticClass: ["vuebly-env-info"]
+  }, [_vm._v(_vm._s(_vm.info))])
+},staticRenderFns: []}
 
 /***/ })
 /******/ ]);

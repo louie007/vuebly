@@ -63,9 +63,10 @@ const webModeConfig = merge(baseWebpackConfig('vue'), {
 
 const weexEntries = utils.buildEntry()
 
-Object.keys(weexEntries).forEach(function (name) {
-  weexEntries[name] = ['webpack-hot-middleware/client?name=weex&reload=true'].concat(weexEntries[name])
-})
+// Support HMR in the future ?
+// Object.keys(weexEntries).forEach(function (name) {
+//   weexEntries[name] = ['webpack-hot-middleware/client?name=weex&reload=true'].concat(weexEntries[name])
+// })
 
 const weexModeConfig = merge(baseWebpackConfig('weex'), {
   name: 'weex',
@@ -89,7 +90,7 @@ configArray.forEach(function (config) {
   // serve webpack bundle output
   app.use(devMiddleware(compiler, {
     publicPath: config.output.publicPath,
-    quiet: false,
+    quiet: config.name === 'weex', // Quiet for Weex mode
     stats: {
       colors: true,
       children: false,
@@ -98,12 +99,14 @@ configArray.forEach(function (config) {
     }
   }))
 
-  // Enables HMR hot-reload and state-preserving
+  // Only enables HMR hot-reload and state-preserving for web mode
   // compilation error display
-  app.use(hotMiddleware(compiler, {
-    log: () => {},
-    heartbeat: 2000
-  }))
+  if (config.name === 'web') {
+    app.use(hotMiddleware(compiler, {
+      log: () => {},
+      heartbeat: 2000
+    }))
+  }
 })
 
 // Handle fallback for HTML5 history API (Web mode only)

@@ -67,7 +67,7 @@ CSS_UNIT.REM = 75;
 /******/ 	__webpack_require__.p = "/";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 16);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -116,28 +116,6 @@ exports.default = {
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-
-
-var _Index = __webpack_require__(5);
-
-var _Index2 = _interopRequireDefault(_Index);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-new Vue({
-  el: '#root',
-  render: function render(h) {
-    return h(_Index2.default);
-  }
-});
-
-/***/ }),
-/* 3 */,
-/* 4 */,
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
 var __vue_exports__, __vue_options__
 var __vue_styles__ = []
 
@@ -163,7 +141,7 @@ if (typeof __vue_options__ === "function") {
 
 __vue_options__.render = __vue_template__.render
 __vue_options__.staticRenderFns = __vue_template__.staticRenderFns
-__vue_options__._scopeId = "data-v-1ff9ce16"
+__vue_options__._scopeId = "data-v-2be5795b"
 __vue_options__.style = __vue_options__.style || {}
 __vue_styles__.forEach(function (module) {
   for (var name in module) {
@@ -178,6 +156,28 @@ module.exports = __vue_exports__
 
 
 /***/ }),
+/* 3 */,
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _Index = __webpack_require__(2);
+
+var _Index2 = _interopRequireDefault(_Index);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+new Vue({
+  el: '#root',
+  render: function render(h) {
+    return h(_Index2.default);
+  }
+});
+
+/***/ }),
+/* 5 */,
 /* 6 */,
 /* 7 */,
 /* 8 */
@@ -227,9 +227,9 @@ module.exports = {
     "justifyContent": "flex-start"
   },
   "vuebly-button": {
-    "width": 480,
-    "height": 80,
-    "borderRadius": 40,
+    "width": 8 * CSS_UNIT.REM,
+    "height": 1.2 * CSS_UNIT.REM,
+    "borderRadius": 0.6 * CSS_UNIT.REM,
     "backgroundColor": "#e91e63",
     "justifyContent": "center",
     "alignItems": "center",
@@ -240,6 +240,10 @@ module.exports = {
     "color": "#FFFFFF"
   },
   "vuebly-logo-image": {
+    "marginTop": 0.5 * CSS_UNIT.REM,
+    "marginRight": 0,
+    "marginBottom": 0.2 * CSS_UNIT.REM,
+    "marginLeft": 0,
     "height": 3.5 * CSS_UNIT.REM,
     "width": 3.5 * CSS_UNIT.REM
   },
@@ -269,18 +273,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   }, [_c('text', {
     staticClass: ["vuebly-button-text"]
-  }, [_vm._v("Say Hello")])])], 1)
+  }, [_vm._v("Say Hello")])])])
 },staticRenderFns: []}
-
-/***/ }),
-/* 13 */,
-/* 14 */,
-/* 15 */,
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(2);
-
 
 /***/ })
 /******/ ]);

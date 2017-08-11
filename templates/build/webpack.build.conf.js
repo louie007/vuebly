@@ -1,29 +1,29 @@
 /**
  * Set Webpack config for HTML5 Web mode and Native Weex mode,
  * - build src to dist/web directory,
- * - build src to dist/weex directory
+ * - build src/views to dist/weex directory
  */
 
 process.env.NODE_ENV = 'production'
 
-var ora = require('ora')
-var chalk = require('chalk')
-var webpack = require('webpack')
-var merge = require('webpack-merge')
-var CopyWebpackPlugin = require('copy-webpack-plugin')
-var HtmlWebpackPlugin = require('html-webpack-plugin')
-// var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
+const ora = require('ora')
+const chalk = require('chalk')
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+// const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 
-var utils = require('./utils')
-var config = require('./config')
-var baseWebpackConfig = require('./webpack.base.conf')
+const utils = require('./utils')
+const config = require('./config')
+const baseWebpackConfig = require('./webpack.base.conf')
 
 /**
  * Webpack config for HTML5 Web mode: 'webModeConfig'
  * Single entry file for web mode: 'config.dev.webEntry'
  */
 
-var webModeConfig = merge(baseWebpackConfig('vue'), {
+const webModeConfig = merge(baseWebpackConfig('vue'), {
   entry: {
     app: [config.build.webEntry]
   },
@@ -81,7 +81,7 @@ var webModeConfig = merge(baseWebpackConfig('vue'), {
         ignore: ['.*']
       }
     ])
-  ]// End
+  ]// End plugins
 })
 
 /**
@@ -89,7 +89,7 @@ var webModeConfig = merge(baseWebpackConfig('vue'), {
  * Multiple entry files for weex mode, built from src/views
  */
 
-var weexModeConfig = merge(baseWebpackConfig('weex'), {
+const weexModeConfig = merge(baseWebpackConfig('weex'), {
   entry: utils.buildEntry(),
   output: {
     path: config.build.distWeexStatic,
@@ -103,14 +103,14 @@ var weexModeConfig = merge(baseWebpackConfig('weex'), {
         ignore: ['.*']
       }
     ])
-  ] // End
+  ]
 })
 
 /**
  * Build now
  */
 
-var spinner = ora('Building for production...')
+const spinner = ora('Building for production...')
 spinner.start()
 
 webpack([webModeConfig, weexModeConfig], function (err, stats) {

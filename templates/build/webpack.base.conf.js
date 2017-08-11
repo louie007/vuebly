@@ -112,7 +112,8 @@ module.exports = function getBaseConfig (_loader) {
         }
       }),
       new webpack.BannerPlugin({
-        banner: '// { "framework": "Vue" }\n',
+        banner: '// { "framework": "Vue" }\n' +
+          (_loader === 'weex' ? 'var CSS_UNIT = new Object();\nCSS_UNIT.REM = 75;\n' : ''),
         raw: true
       })
     ]

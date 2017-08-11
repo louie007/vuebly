@@ -1,6 +1,10 @@
-var path = require('path')
-var fs = require('fs-extra')
-var config = require('./config')
+const path = require('path')
+const fs = require('fs-extra')
+const config = require('./config')
+
+/**
+ * Path shorthands
+ */
 
 exports.resolve = function (dir) {
   return path.join(__dirname, '..', dir)
@@ -10,12 +14,29 @@ exports.joinPath = function (path1, path2) {
   return path.posix.join(path1, path2)
 }
 
-// var srcPath = exports.resolve('src/views')
-// var entryPath = exports.resolve('entry')
+/**
+ * Create Weex entry files,
+ * Build and return the entries array
+ */
+let entries = {}
 
-exports.getEntryFileContent = function (_path) {
+const isWin = /^win/.test(process.platform)
+
+const weexViewsSrcPath = process.env.NODE_ENV === 'production'
+  ? config.build.weexViewsSrc
+  : config.dev.weexViewsSrc
+
+const weexViewsEntriesPath = process.env.NODE_ENV === 'production'
+  ? config.build.weexViewsEntries
+  : config.dev.weexViewsEntries
+
+function getEntryFileContent (entryPath, vueFilePath) {
+  let relativePath = path.relative(path.join(entryPath, '../'), vueFilePath)
+  if (isWin) {
+    relativePath = relativePath.replace(/\\/g, '\\\\')
+  }
   return `// Weex Entry
-import App from '${_path}.vue'
+import App from '${relativePath}'
 /* eslint-disable no-new */
 new Vue({
   el: '#root',
@@ -24,29 +45,44 @@ new Vue({
 `
 }
 
-exports.buildEntry = function () {
-  // Write entry files
-  fs.readdirSync(config.dev.weexViewsSrc).forEach(file => {
-    var fullpath = path.resolve(config.dev.weexViewsSrc, file)
-    var extname = path.extname(fullpath)
-    var name = path.basename(file, extname)
-    if (fs.statSync(fullpath).isFile() && extname === '.vue') {
-      fs.outputFileSync(path.resolve(config.dev.weexViewsEntries, name.toLowerCase() + '.js'), exports.getEntryFileContent('../views/' + name))
+function walk (dir) {
+  dir = dir || '.'
+
+  let dirPath = path.resolve(weexViewsSrcPath, dir)
+
+  fs.readdirSync(dirPath)
+    .forEach((file) => {
+      let srcPath = path.resolve(dirPath, file)
+      let srcStat = fs.statSync(srcPath)
+      let extName = path.extname(srcPath)
+      if (srcStat.isFile() && extName === '.vue') {
+        let fileName = path.join(dir, path.basename(file, extName).toLowerCase())
+        let entryPath = path.resolve(weexViewsEntriesPath, fileName + '.js')
+        // Write entry files
+        fs.outputFileSync(entryPath, getEntryFileContent(entryPath, srcPath))
+        // Entries array
+        entries[fileName] = entryPath + '?entry=true'
+      } else if (srcStat.isDirectory()) {
+        let subdir = path.join(dir, file)
+        walk(subdir)
+      }
     }
-  })
-  var entry = {}
-  // Create entry files array
-  fs.readdirSync(config.dev.weexViewsEntries).forEach(file => {
-    const name = path.basename(file, path.extname(path.resolve(config.dev.weexViewsEntries, file))).toLowerCase()
-    entry[name] = [path.resolve(config.dev.weexViewsEntries, name + '.js')]
-  })
-  return entry
+  )
 }
 
+exports.buildEntry = function () {
+  entries = {}
+  walk()
+  return entries
+}
+
+/**
+ * StyleLoaders helper from Vue.js webpack template
+ */
 exports.cssLoaders = function (options) {
   options = options || {}
 
-  var cssLoader = {
+  let cssLoader = {
     loader: 'css-loader',
     options: {
       minimize: process.env.NODE_ENV === 'production',
@@ -55,7 +91,7 @@ exports.cssLoaders = function (options) {
   }
 
   function generateLoaders (loader, loaderOptions) {
-    var loaders = [cssLoader]
+    let loaders = [cssLoader]
     if (loader) {
       loaders.push({
         loader: loader + '-loader',
@@ -81,10 +117,10 @@ exports.cssLoaders = function (options) {
 
 // Generate loaders for standalone style files (outside of .vue)
 exports.styleLoaders = function (options) {
-  var output = []
-  var loaders = exports.cssLoaders(options)
-  for (var extension in loaders) {
-    var loader = loaders[extension]
+  let output = []
+  let loaders = exports.cssLoaders(options)
+  for (let extension in loaders) {
+    let loader = loaders[extension]
     output.push({
       test: new RegExp('\\.' + extension + '$'),
       use: loader

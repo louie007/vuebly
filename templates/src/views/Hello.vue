@@ -54,16 +54,16 @@ export default {
   @import '../assets/css/base.scss';
   
   .vuebly-hello-text {
-    margin-top: 150px;
+    margin-top: 2rem;
     text-align: center;
-    font-size: 30px;
-    height: 100px;
+    font-size: 0.5rem;
+    height: 1rem;
     color: #575757;
   }
   .vuebly-countdown-text {
-    margin-bottom: 30px;
+    margin-bottom: 0.2rem;
     text-align: center;
-    font-size: 30px;
+    font-size: 0.5rem;
     color: #e91e63;
   }
 
